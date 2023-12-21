@@ -16,5 +16,5 @@ RUN apk add --update --no-cache bash tor tzdata vim v2ray autoconf build-base gi
 && cd /home/aria2 && autoreconf -i && ./configure && make -j`nproc` && make install && rm -rf /home/aria2 \
 && apk del autoconf build-base git libtool gnutls-dev libssh2-dev c-ares-dev libxml2-dev sqlite-dev automake cppunit-dev util-macros gettext-dev zlib-dev
 
-CMD ["/run/run_aria2.sh"]
+CMD ["bash", "/run/run_aria2.sh"]
 
